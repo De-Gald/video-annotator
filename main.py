@@ -7,14 +7,22 @@ import pandas as pd
 import plotly.graph_objs as go
 from dash.dependencies import Input, Output, State
 
-DEBUG = True
 FRAMERATE = 24
 
 app = dash.Dash(__name__)
+app.title = 'Video annotator'
 server = app.server
 
 app.scripts.config.serve_locally = True
 app.config['suppress_callback_exceptions'] = True
+
+try:
+  import googleclouddebugger
+  googleclouddebugger.enable(
+    breakpoint_enable_canary=True
+  )
+except ImportError:
+  pass
 
 
 def load_data(path):
@@ -44,9 +52,6 @@ def load_data(path):
         "classes_padded": classes_padded,
         "root_round": root_round
     }
-
-    if DEBUG:
-        print(f'{path} loaded.')
 
     return data_dict
 
@@ -379,4 +384,4 @@ def update_images(n, current_time, footage, threshold):
 
 
 if __name__ == '__main__':
-    app.run_server(dev_tools_hot_reload=True, debug=DEBUG, host='0.0.0.0')
+    app.run_server(host='0.0.0.0', port=8080)
