@@ -1,0 +1,87 @@
+._dash-undo-redo {
+    display: none;
+}
+
+body {
+    margin: 0;
+    color: #7b1c1c;
+    font-family: 'Raleway', sans-serif;
+    background-color: #F9F9F9;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#header-section {
+    width: 95%;
+}
+
+.image_style {
+    width: 150px;
+    height: 150px;
+    margin-right: 2%;
+    background-image: url('https://cdn.iconscout.com/icon/free/png-512/data-not-found-1965034-1662569.png');
+    background-size: 150px 150px;
+}
+
+.video-outer-container {
+    width: 95%;
+    margin-bottom: 2%;
+    min-width: 500px;
+}
+
+.control-section {
+    width: 95%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 5px;
+    flex-shrink: 0;
+    margin-bottom: 2%;
+}
+
+.control-element {
+    font-size: 15px;
+    padding: 10px;
+    display: flex;
+    font-style: italic;
+    flex-flow: row nowrap;
+}
+
+
+.has-value.Select--single > .Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+    color: #7b1c1c;
+}
+
+.rc-slider-track {
+    background-color: #666dff;
+}
+
+.rc-slider-dot-active, .rc-slider-dot, .rc-slider-handle {
+    border-color: #666dff;
+}
+
+.rc-slider-handle:hover {
+    border-color: #666dff;
+}
+
+.plot-title {
+    margin-top: 5%;
+    width: 250px;
+    font-weight: 500;
+}
+
+.column,
+.columns {
+  float: left;}
+
+.five.columns                   { width: 42.3333333333%; }
+.seven.columns                  { width: 56.6666666667%; }
